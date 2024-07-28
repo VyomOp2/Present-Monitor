@@ -1,0 +1,36 @@
+entity-relationship-diagram
+
+Users [icon: user, color: yellow] {
+  id: string pk
+  username: string
+  password: string
+  email: string
+  phoneNumber: string
+  avatar: string
+}
+
+GNUMS [icon: app-store, color: blue] {
+  userId: string pk, fk (references Users.id)
+  password: string
+}
+
+AttendanceRecords [icon: calendar, color: green] {
+  id: string pk
+  userId: string fk (references Users.id)
+  date: date
+  status: string
+}
+
+Notifications [icon: bell, color: red] {
+  id: string pk
+  userId: string fk (references Users.id)
+  type: string
+  sentAt: timestamp
+}
+
+// Relationships
+
+Users.id - GNUMS.userId
+Users.id - AttendanceRecords.userId
+Users.id - Notifications.userId
+
