@@ -431,12 +431,12 @@ export function GlobeDemo() {
 								attendance checks with ease. We send your
 								attendance updates via email and WhatsApp. Stay
 								informed effortlessly!
-								<div className="mt-4">
-									<Link href={"/Subscribe"}>
-										<Button>Subscribe for Updates</Button>
-									</Link>
-								</div>
 							</p>
+							<div className="mt-4">
+								<Link href={"/Subscribe"}>
+									<Button>Subscribe for Updates</Button>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>
